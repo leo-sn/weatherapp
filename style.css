@@ -9,22 +9,21 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: #222;
+    color: rgb(72, 72, 72);
     font-family: 'Roboto', sans-serif;
     background-image: url('https://images.unsplash.com/photo-1617869884925-f8f0a51b2374?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9reW8lMjBuaWdodHxlbnwwfHwwfHw%3D&w=1000&q=80');
     font-size: 120%;
     
 }
 
-
-
 .card {
-    background: #bdbdbde0;
+    background: #f4f2f2e0;
     padding: 1.1em 1.5em;
     border-radius: 30px;
     width: 100%;
     max-width: 420px;
     margin: 1em;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
 
 }
 
@@ -34,19 +33,23 @@ body {
     justify-content: center;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 button {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
     height: 46px;
     width: 46px;
-    background-color: #e0e0e0c4;
+    background-color: #cfcfcfc4;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #ffffffe9;
+    background-color: #e9e9e9e9;
 }
 
 .search-bar {
@@ -54,7 +57,7 @@ button:hover {
     outline: none;
     padding: 0.5em 1em;
     border-radius: 24px;
-    background-color: #e0e0e08e;
+    background-color: #cfcfcfc4;
     color: rgb(47, 47, 47);
     font-family: inherit;
     font-size: 105%;
@@ -65,4 +68,29 @@ button:hover {
 
 h1.temp {
     margin: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 0.5em;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: rgb(66, 65, 65);
+    position: absolute;
+    top: 0;
+    left: 20px;
 }
